@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const CharacterByHero = ({alter_ego, characters})=>{
     // if(alter_ego === characters) return (<></>);
     // return <p>{ characters }</p>
@@ -15,7 +15,7 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    const heroImgUrl = `../../assets/heroes/${id}.jpg`;
+    const heroImgUrl = `../src/assets/heroes/${id}.jpg`;
     //const characterByHero = (<p>{ characters }</p>);
 
 
@@ -40,7 +40,7 @@ export const HeroCard = ({
                             <p className="card-text">
                                 <small className="text-muted">{ first_appearance }</small>
                             </p>
-                            <Link to={ `hero/${ id }` }>Más..</Link>
+                            <NavLink to={ `/hero/${ id }` }>Más..</NavLink>
                         </div>
                     </div>
                 </div>
